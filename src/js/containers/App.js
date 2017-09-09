@@ -8,13 +8,14 @@ import Layout from '~/components/Layout';
 export default class App extends Component {
   render() {
     return (
-      <Route render={props => (
-        <Layout>
-          { this.props.children }
-        </Layout>
-      )}/>
-    )
+      <Route
+        render={props => (
+          <Layout>
+            { props.children }
+          </Layout>
+        )}
+      />
+    );
   }
 }
-
 

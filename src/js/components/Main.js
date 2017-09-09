@@ -10,8 +10,7 @@ export default class Main extends Component {
         <div>hoge</div>
         <div>{this.props.counter}</div>
       </div>
-    )
+    );
   }
 }
-
 

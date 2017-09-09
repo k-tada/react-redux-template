@@ -7,8 +7,8 @@ export default class MainContainer extends Component {
   render() {
     const { counter } = this.props;
     return (
-      <Main counter={ counter }/>
-    )
+      <Main counter={counter} />
+    );
   }
 }
 

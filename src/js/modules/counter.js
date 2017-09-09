@@ -6,6 +6,6 @@ export const {
 } = createModule('counter', {
   INC: { reducer: state => state + 1 },
   DEC: { reducer: state => state - 1 },
-  CLEAR: { reducer: state => 0 },
+  CLEAR: { reducer: () => 0 },
 }, 0);
 

@@ -13,10 +13,9 @@ const history = syncHistoryWithStore(createBrowserHistory(), store);
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter history={history}>
-    { getRoutes(store) }
+      {getRoutes(store)}
     </BrowserRouter>
   </Provider>,
-  document.getElementById('main')
+  document.getElementById('main'),
 );
-
 

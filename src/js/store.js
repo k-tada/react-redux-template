@@ -14,6 +14,7 @@ export default function createStore(initialState) {
   ];
 
   let enhancer;
+  /* eslint "no-undef": 0 */
   if (__DEVELOPMENT__ && __CLIENT__ && __DEVTOOLS__) {
     enhancer = compose(
       applyMiddleware(...middlewares),
@@ -26,8 +27,7 @@ export default function createStore(initialState) {
 
   const store = enhancer(reducers, initialState);
 
-  sagaMiddleware.run(function* () { yield sagas });
+  sagaMiddleware.run(function* () { yield sagas; });
   return store;
 }
-
 

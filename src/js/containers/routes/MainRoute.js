@@ -1,19 +1,20 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
 
 @withRouter
-@connect(({}) => ({}), {})
-export default class MainRoute extends Component {
+export default class MainRoute extends React.Component {
   render() {
     const {
       component: Component,
-      ...rest,
+      ...rest
     } = this.props;
     return (
-      <Route {...rest} render={props => (
-        <Component {...props} />
-      )}/>
+      <Route
+        {...rest}
+        render={props => (
+          <Component {...props} />
+        )}
+      />
     );
   }
 }
