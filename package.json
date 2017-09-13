@@ -21,7 +21,7 @@
     "watch": "npm run watch:html & npm run watch:webpack & npm run watch:browser",
     "start": "npm run build && npm run watch",
     "eslint": "eslint ./src; exit 0;",
-    "stylelint": "stylelint ./src; exit 0;",
+    "stylelint": "`npm bin`/stylelint \"./src/**/*.css\"",
     "lint": "npm run eslint && npm run stylelint",
     "jest": "jest --verbose --coverage",
     "test": "npm run lint && npm run jest",
